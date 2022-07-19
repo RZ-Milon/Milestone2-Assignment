@@ -17,7 +17,8 @@ main{
     width: 1600px;
     height: 2534px;
     background: #FFFFFF;
-    margin: 50px 140px;
+    margin: 0 auto;
+    border: 1px solid;
 }
 .flexible-content{
     display: flex;
@@ -32,6 +33,7 @@ main{
     width: 1321px;
     height: 646px;
     border-radius: 30px;
+    margin: 50px 140px;
 }
 .banner-header{
     width: 531px;
@@ -78,3 +80,107 @@ main{
 }
 
 
+/*////////////////////////////////////////////////////////////////////////
+//  02- Blogs section design
+///////////////////////////////////////////////////////////////////////*/
+.blogs{
+    margin: 130px 140px;
+}
+
+.left-menu{
+    width: 312px;
+    height: 312px;
+    background: #161616;
+    border-radius: 10px;
+    margin-right: 24px;
+}
+
+.left-menu ul{
+    padding: 30px; 
+    width: 254px;
+    height: 254px;
+}
+.left-menu ul li {
+    width: 254px;
+    height: 64px;
+    margin-bottom: 30px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    list-style: none;
+}
+.left-menu ul li a{
+    color: #161616;
+    font-weight: 500;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 17px 39px;
+    text-align: center;
+    display: block;
+}
+.blog{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 24px;
+}
+
+.blog-card{
+    width: 312px;
+    height: 362px;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+.blog-card img{
+    width: 312px;
+    height: 175px;
+}
+
+
+
+
+/*////////////////////////////////////////////////////////////////////////
+//  03- Footer section design
+///////////////////////////////////////////////////////////////////////*/
+
+footer{
+    width: 1600px;
+    height: 444px;
+    background: #161616;
+    margin: 0 auto;
+    text-align: center;
+}
+footer p{
+    font-size: 40px;
+    font-weight: 600;
+    color: #FFFFFF;
+    line-height: 60px;
+    padding: 130px 752px;
+    padding-bottom: 60px;
+}
+
+hr{
+    width: 1320px;
+    height: 0px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 0 140px;
+}
+footer ul{
+    padding-top: 50px;
+}
+footer li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 50px;
+}
+footer li:last-child{
+    margin-right: 0;
+}
+footer nav a{
+    text-decoration: none;
+    color: #B9B9B9;
+    font-weight: 500;
+    font-size: 16px;
+}
+footer li:hover{
+    border-bottom: 3px solid red;
+}
