@@ -147,7 +147,6 @@ footer{
     height: 444px;
     background: #161616;
     margin: 0 auto;
-    text-align: center;
 }
 footer p{
     font-size: 40px;
@@ -175,7 +174,12 @@ footer li{
 footer li:last-child{
     margin-right: 0;
 }
-footer nav a{
+footer nav{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 200px;
+}
+footer nav a, small{
     text-decoration: none;
     color: #B9B9B9;
     font-weight: 500;
@@ -183,4 +187,21 @@ footer nav a{
 }
 footer li:hover{
     border-bottom: 3px solid red;
+}
+.social-media{
+   padding-top: 50px;
+   text-align: right;
+   margin-right: 140px;
+   position: static;
+}
+.fa-brands {
+    font-size: 35PX;
+    color: #FFFFFF;
+    margin-left: 20px;
+    opacity: 0.7;
+    transition: transform 3s;
+}
+.fa-brands:hover{
+    opacity: 1;
+    transform: scale(1.5);
 }
