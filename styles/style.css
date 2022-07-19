@@ -7,18 +7,74 @@
     outline: 0;
 }
 
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 body{
+
     font-family: 'Montserrat', sans-serif;
+}
+main{
+    width: 1600px;
+    height: 2534px;
+    background: #FFFFFF;
+    margin: 50px 140px;
+}
+.flexible-content{
+    display: flex;
+    justify-content: space-between;
 }
 
 /*////////////////////////////////////////////////////////////////////////
 //  01- Banner section design
 ///////////////////////////////////////////////////////////////////////*/
 .web-banner{
-   
+    background-color: #161616;
+    width: 1321px;
+    height: 646px;
+    border-radius: 30px;
+}
+.banner-header{
+    width: 531px;
+    height: 424px;
+    padding-right: 24px;
+    padding: 111px 106px;
+}
+
+.banner-header h2{
+    font-size: 70px;
+    font-weight: 700;
+    color: #FFFFFF;
+    padding-bottom: 20px;
+}
+.banner-header p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #FFFFFF;
+    padding-bottom: 30px;
+}
+
+.live-btn{
+    background: #DD0000;
+    width: 187px;
+    height: 56px;
+    border-radius: 5px;
+    padding: 16px 25px;
+    border: none;
+}
+.live-btn a{
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    color: #FFFFFF;
+}  
+.banner-image img{
+    width: 581px;
+    height: 613px;
+    padding-top: 33px;
+    padding-right: 79px;
 }
 
 
