@@ -18,7 +18,6 @@ main{
     height: 2534px;
     background: #FFFFFF;
     margin: 0 auto;
-    border: 1px solid;
 }
 .flexible-content{
     display: flex;
@@ -129,6 +128,20 @@ main{
     border: 1px solid gray;
     border-radius: 10px;
 }
+.transfer-btn{
+    width: 100px;
+    height: 32px;
+    background-color: #FFFFFF;
+}
+
+
+.transfer-btn a{
+    text-decoration: none;
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    color: #161616;
+}
 
 .blog-card img{
     width: 312px;
@@ -188,18 +201,17 @@ footer nav a, small{
 footer li:hover{
     border-bottom: 3px solid red;
 }
-.social-media{
-   padding-top: 50px;
-   text-align: right;
-   margin-right: 140px;
-   position: static;
+.social-media {
+    padding-top: 35px;
+    text-align: right;
+    margin-right: 140px;
 }
 .fa-brands {
-    font-size: 35PX;
+    font-size: 35px;
     color: #FFFFFF;
     margin-left: 20px;
     opacity: 0.7;
-    transition: transform 3s;
+    transition: transform 1s;
 }
 .fa-brands:hover{
     opacity: 1;
