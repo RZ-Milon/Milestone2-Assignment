@@ -6,55 +6,52 @@
     padding: 0;
     outline: 0;
 }
-
+/* Font face */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 body{
-
     font-family: 'Montserrat', sans-serif;
 }
 main{
-    width: 1600px;
-    height: 2534px;
+    box-sizing: border-box;
     background: #FFFFFF;
-    margin: 0 auto;
+    margin: 50px 100px;
 }
 .flexible-content{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
+
 
 /*////////////////////////////////////////////////////////////////////////
 //  01- Banner section design
 ///////////////////////////////////////////////////////////////////////*/
 .web-banner{
+    width: 100%;
     background-color: #161616;
-    width: 1321px;
     height: 646px;
     border-radius: 30px;
-    margin: 50px 140px;
+    background-size: cover;
 }
-.banner-header{
+.banner-header {
     width: 531px;
     height: 424px;
-    padding-right: 24px;
-    padding: 111px 106px;
+    padding: 0px 50px;
 }
-
-.banner-header h2{
-    font-size: 70px;
+.banner-header h2 {
+    font-size: 61px;
     font-weight: 700;
-    color: #FFFFFF;
+    color: rgb(255, 255, 255);
     padding-bottom: 20px;
 }
-.banner-header p{
+.banner-header p {
     font-size: 16px;
     font-weight: 400;
     line-height: 26px;
     color: #FFFFFF;
     padding-bottom: 30px;
 }
-
 .live-btn{
     background: #DD0000;
     width: 187px;
@@ -62,6 +59,11 @@ main{
     border-radius: 5px;
     padding: 16px 25px;
     border: none;
+    cursor: pointer;
+    transition: width 1s;
+}
+.live-btn:hover{
+    width: 300px;
 }
 .live-btn a{
     text-decoration: none;
@@ -72,20 +74,16 @@ main{
     color: #FFFFFF;
 }  
 .banner-image img{
-    width: 581px;
+    background-size: cover;
     height: 613px;
     padding-top: 33px;
-    padding-right: 79px;
+    padding-right: 70px;
 }
 
 
 /*////////////////////////////////////////////////////////////////////////
 //  02- Blogs section design
 ///////////////////////////////////////////////////////////////////////*/
-.blogs{
-    margin: 130px 140px;
-}
-
 .left-menu{
     width: 312px;
     height: 312px;
@@ -93,7 +91,6 @@ main{
     border-radius: 10px;
     margin-right: 24px;
 }
-
 .left-menu ul{
     padding: 30px; 
     width: 254px;
@@ -101,11 +98,18 @@ main{
 }
 .left-menu ul li {
     width: 254px;
-    height: 64px;
+    height: 60px;
     margin-bottom: 30px;
     background: #FFFFFF;
     border-radius: 10px;
     list-style: none;
+}
+#blog, #upcoming-match{
+    background-color: #DD0000;
+}
+.left-menu li:hover{
+    background-color: #DD0000;
+    transition: 0.8s;
 }
 .left-menu ul li a{
     color: #161616;
@@ -116,36 +120,58 @@ main{
     text-align: center;
     display: block;
 }
+.blogs{
+    align-items: flex-start;
+    margin-top: 100px;
+}
 .blog{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 24px;
+    width: 100%;
 }
-
 .blog-card{
-    width: 312px;
+    width: 250px;
     height: 362px;
-    border: 1px solid gray;
+    border: 0.01px solid #dfd9d9;
     border-radius: 10px;
+}
+.blog-card img{
+    width: 250px;
+    height: 175px;
+}
+.blog-detail p{
+    padding: 10px 18px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 27px;
+    color: #161616;
+    padding-top: 0;
 }
 .transfer-btn{
     width: 100px;
     height: 32px;
     background-color: #FFFFFF;
+    cursor: pointer;
+    margin: 20px;
+    border: 1px solid;
+    border-radius: 5px;
 }
-
-
 .transfer-btn a{
     text-decoration: none;
     text-align: center;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 14px;
     color: #161616;
 }
-
-.blog-card img{
-    width: 312px;
-    height: 175px;
+.blog-icon span {
+    padding: 6px 18px;
+    margin-right: 5px;
+}
+.fa-regular{
+    font-weight: 400;
+    font-size: 16px;
+    color: rgba(22, 22, 22, 0.7);
 }
 
 
@@ -154,30 +180,30 @@ main{
 /*////////////////////////////////////////////////////////////////////////
 //  03- Footer section design
 ///////////////////////////////////////////////////////////////////////*/
-
 footer{
-    width: 1600px;
-    height: 444px;
+    margin-top: 100px;
     background: #161616;
-    margin: 0 auto;
+    height: 444px;
 }
 footer p{
     font-size: 40px;
     font-weight: 600;
     color: #FFFFFF;
     line-height: 60px;
-    padding: 130px 752px;
-    padding-bottom: 60px;
+    padding-bottom: 50px;
+    text-align: center;
+    padding-top: 100px;
 }
-
 hr{
-    width: 1320px;
+    width: 80%;
     height: 0px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     margin: 0 140px;
 }
 footer ul{
     padding-top: 50px;
+    text-align: center;
+    height: 30px;
 }
 footer li{
     list-style: none;
@@ -186,11 +212,6 @@ footer li{
 }
 footer li:last-child{
     margin-right: 0;
-}
-footer nav{
-    display: flex;
-    justify-content: space-between;
-    margin-left: 200px;
 }
 footer nav a, small{
     text-decoration: none;
@@ -202,18 +223,38 @@ footer li:hover{
     border-bottom: 3px solid red;
 }
 .social-media {
-    padding-top: 35px;
-    text-align: right;
-    margin-right: 140px;
+    padding-top: 50px;
+    text-align: center;
+}
+small{
+    color: #DD0000;
 }
 .fa-brands {
     font-size: 35px;
     color: #FFFFFF;
-    margin-left: 20px;
+    margin-left: 25px;
     opacity: 0.7;
     transition: transform 1s;
 }
 .fa-brands:hover{
     opacity: 1;
     transform: scale(1.5);
+}
+
+
+/*////////////////////////////////////////////////////////////////////////
+//  04- Responsive web design
+///////////////////////////////////////////////////////////////////////*/
+
+/* Small device Mobile */
+@media screen and (max-width: "768px") {
+    .flexible-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .left-menu{
+        display: none;
+    }
 }
