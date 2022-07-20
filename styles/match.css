@@ -1,0 +1,25 @@
+.match-card {
+    width: 259px;
+    height: 230px;
+    padding: 40px 10px;
+    border: 0.01px solid #dfd9d9;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+.flug img{
+    width: 95px;
+    height: 56px;
+}
+.flug p{
+    font-weight: 700;
+    font-size: 16px;
+    margin: 8px;
+    display: inline-block;
+}
+.match-schedule p{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    color: #161616;
+    margin-bottom: 15px;
+}
