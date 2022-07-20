@@ -308,9 +308,25 @@ small{
         padding-top: 33px;
         padding-right: 70px;
     }
+    footer li{
+        display: block;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10px;
+    }
 
 
-    .container{
-        grid-template-columns: repeat(1, 1fr);
+}
+
+
+
+/* Tablate */
+@media screen and (max-width:768){
+    .left-menu{
+        display: inline;
+    }
+    .blog{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
