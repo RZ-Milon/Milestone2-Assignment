@@ -22,37 +22,30 @@ main{
     justify-content: space-between;
     align-items: center;
 }
-
-
 /*////////////////////////////////////////////////////////////////////////
 //  01- Banner section design
 ///////////////////////////////////////////////////////////////////////*/
-#blog-banner-section{
+.web-banner{
     width: 100%;
     background-color: #161616;
     height: 646px;
     border-radius: 30px;
     background-size: cover;
 }
-#blog-banner-section article{
-    flex-basis: 50%;
-    padding: 0px 50px;
+.banner-header, .banner-image {
+    width: 50%;
+    padding: 53px 50px;
 }
-#blog-banner-section aside{
-    flex-basis: 50%;
-    text-align: center;
-}
-
-.banner-heading{
-    font-size: 61px;
+.banner-header h2{
+    font-size: 65px;
     font-weight: 700;
-    color: rgb(255, 255, 255);
+    color: #FFFFFF;
     padding-bottom: 20px;
 }
-.banner-desc{
-    font-size: 16px;
+.banner-header p{
+    font-size: 14px;
     font-weight: 400;
-    line-height: 26px;
+    line-height: 20px;
     color: #FFFFFF;
     padding-bottom: 30px;
 }
@@ -65,6 +58,7 @@ main{
     border: none;
     cursor: pointer;
     transition: width 1s;
+    margin-top: 25px;
 }
 .live-btn:hover{
     width: 300px;
@@ -76,9 +70,8 @@ main{
     line-height: 23px;
     text-align: center;
     color: #FFFFFF;
-}
-
-.banner-image{
+}  
+.banner-image img{
     width: 100%;
     height: 613px;
     padding-top: 33px;
@@ -89,6 +82,7 @@ main{
 /*////////////////////////////////////////////////////////////////////////
 //  02- Blogs section design
 ///////////////////////////////////////////////////////////////////////*/
+
 .left-menu{
     width: 312px;
     height: 312px;
@@ -96,6 +90,7 @@ main{
     border-radius: 10px;
     margin-right: 24px;
 }
+
 .left-menu ul{
     padding: 30px; 
     width: 254px;
@@ -103,7 +98,7 @@ main{
 }
 .left-menu ul li {
     width: 254px;
-    height: 60px;
+    height: 64px;
     margin-bottom: 30px;
     background: #FFFFFF;
     border-radius: 10px;
@@ -112,7 +107,7 @@ main{
 #blog, #upcoming-match{
     background-color: #DD0000;
 }
-.left-menu li:hover{
+.left-menu li:active, .left-menu li:hover{
     background-color: #DD0000;
     transition: 0.8s;
 }
@@ -133,7 +128,6 @@ main{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 24px;
-    width: 100%;
 }
 .blog-card{
     width: 250px;
@@ -145,6 +139,7 @@ main{
     width: 250px;
     height: 175px;
 }
+
 .blog-detail p{
     padding: 10px 18px;
     font-weight: 600;
@@ -162,6 +157,10 @@ main{
     border: 1px solid;
     border-radius: 5px;
 }
+.transfer-btn:hover{
+    opacity: 0.5;
+}
+
 .transfer-btn a{
     text-decoration: none;
     text-align: center;
@@ -169,6 +168,7 @@ main{
     font-size: 14px;
     color: #161616;
 }
+
 .blog-icon span {
     padding: 6px 18px;
     margin-right: 5px;
@@ -179,18 +179,21 @@ main{
     color: rgba(22, 22, 22, 0.7);
 }
 #view-all {
-    margin-top: 50px;
+    height: 0;
+    margin: 0%;
     display: flex;
     justify-content: center;
     align-items: center;
-    display: none;
+    visibility: collapse;
 }
+
 
 
 
 /*////////////////////////////////////////////////////////////////////////
 //  03- Footer section design
 ///////////////////////////////////////////////////////////////////////*/
+
 footer{
     margin-top: 100px;
     background: #161616;
@@ -211,17 +214,17 @@ hr{
     border: 1px solid rgba(255, 255, 255, 0.1);
     margin: 0 140px;
 }
-footer ul{
+footer nav ul{
     padding-top: 50px;
     text-align: center;
     height: 30px;
 }
-footer li{
+footer nav li{
     list-style: none;
     display: inline-block;
     margin-right: 50px;
 }
-footer li:last-child{
+footer nav li:last-child{
     margin-right: 0;
 }
 footer nav a, small{
@@ -254,79 +257,87 @@ small{
 
 
 /*////////////////////////////////////////////////////////////////////////
-//  04- Responsive styles
+//  04- Responsive web design
 ///////////////////////////////////////////////////////////////////////*/
 
-/* Small device Mobile */
-@media screen and (max-width: 576px) {
-    body{
-        font-size: 75%;
-    }
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px){
     main{
-        margin: 20px 15px;
+        margin: 30px 80px;
     }
-    #web-banner-section{
-        min-height: auto;
-    }
-    #web-banner-section article{
-        width: 100%;
-    }
-    #web-banner-section img{
-        max-width: 100%;
-    }
-    .web-banner article{
-        width: 100%;
-    }
-
-    .banner-image img{{
-        width: 100%;
+    .banner-header, .banner-image {
+        width: 50%;
+        padding: 30px 50px;
     }
     .banner-header h2{
-        font-weight: 700;
-        font-size: 45px;
-        text-align: center;
-        padding: 60px 50px;
+        font-size: 40px;
     }
-    .banner-header p {
-        font-weight: 400;
-        font-size: 14px;
-        text-align: center;
-        padding: 0 55px;
+    .banner-header p{
+        width: 250px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
-    .live-btn{
-        margin-top: 50px;
+    .blogs{
         display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 8px 12px;
-        width: 161px;
-        height: 40px;
-    }
-    .banner-image img{
-        background-size: cover;
-        height: 613px;
-        padding-top: 33px;
-        padding-right: 70px;
-    }
-    footer li{
-        display: block;
         flex-direction: column;
-        align-items: center;
-        padding-top: 10px;
+        margin-top: 80px;
     }
-
-
-}
-
-
-
-/* Tablate */
-@media screen and (max-width:768){
     .left-menu{
-        display: inline;
+        background: none;
+        height: 150px;
+    }
+    .menu{
+        display: flex;
+        align-items: flex-start;
+    }
+    .left-menu ul{
+        width: 740px;
+    }
+    .left-menu ul li{
+        width: 250px;
+        height: 50px;
+        border: 0.01px solid #dfd9d9;
+        margin-right: 20px;
+        margin-bottom: 0;
+        
+    }
+    .left-menu li:last-child{
+        margin-right: 0;
+    }
+    .left-menu ul li a{
+        padding: 10px 20px;
+        text-align: center;
     }
     .blog{
-        display: grid;
         grid-template-columns: repeat(2, 1fr);
+        width: 100%;
     }
+    .blog-card{
+        width: 357px;
+        height: 415;
+        align-items: center;
+        justify-content: center;
+    }
+    .blog-card img{
+        width: 100%;
+        height: 180px;
+    }
+    .display-none{
+        display: none;
+    }
+    #view-all{
+        visibility: visible;
+        margin-top: 80px;
+    }
+    footer nav ul{
+        padding: 10px 150px;
+    }
+    footer nav li{
+        display: flex;
+        justify-content: center;
+        display: inline-block;
+        flex-wrap: wrap;
+    }
+
 }
