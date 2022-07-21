@@ -214,26 +214,24 @@ hr{
     border: 1px solid rgba(255, 255, 255, 0.1);
     margin: 0 140px;
 }
-footer nav ul{
+.footer-nav{
     padding-top: 50px;
-    text-align: center;
     height: 30px;
+    text-align: center;
 }
-footer nav li{
+.footer-nav a, small{
     list-style: none;
     display: inline-block;
     margin-right: 50px;
-}
-footer nav li:last-child{
-    margin-right: 0;
-}
-footer nav a, small{
     text-decoration: none;
     color: #B9B9B9;
     font-weight: 500;
     font-size: 16px;
 }
-footer li:hover{
+.footer-nav a:last-child{
+    margin-right: 0;
+}
+.footer-nav a:hover{
     border-bottom: 3px solid red;
 }
 .social-media {
@@ -259,11 +257,8 @@ small{
 /*////////////////////////////////////////////////////////////////////////
 //  04- Responsive web design
 ///////////////////////////////////////////////////////////////////////*/
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (min-width: 600px) and (max-width: 768px) {
-    body{
-        background-color: blue;
-    }
+/* Extra small devices phones */
+@media screen and (max-width: 576px) {
     main{
         margin: 20px 15px;
     }
@@ -271,8 +266,6 @@ small{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         min-height: 690px;
-        margin: 0;
-        padding: 0;
     }
     .banner-header, .banner-image {
         width: 100%;
@@ -377,7 +370,7 @@ small{
 Media Query for Tablets Ipads
 ------------------------------------------------------*/
 
-@media only screen and (min-width: 768px) and (max-width: 1024px){
+@media only screen and (min-width: 576px) and (max-width: 992px){
     main{
         margin: 30px 80px;
     }
