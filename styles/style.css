@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     outline: 0;
+    box-sizing: border-box;
 }
 /* Font face */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
@@ -13,7 +14,6 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 main{
-    box-sizing: border-box;
     background: #FFFFFF;
     margin: 50px 100px;
 }
@@ -25,22 +25,22 @@ main{
 /*////////////////////////////////////////////////////////////////////////
 //  01- Banner section design
 ///////////////////////////////////////////////////////////////////////*/
-.web-banner{
+.web-banner {
     width: 100%;
     background-color: #161616;
-    height: 646px;
-    border-radius: 30px;
+    min-height: 90vh;
+    border-radius: 10px;
     background-size: cover;
+    padding: 0 50px;
 }
 .banner-header, .banner-image {
     width: 50%;
-    padding: 53px 50px;
 }
-.banner-header h2{
+.banner-header h2 {
     font-size: 65px;
     font-weight: 700;
     color: #FFFFFF;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
 }
 .banner-header p{
     font-size: 14px;
@@ -71,43 +71,48 @@ main{
     text-align: center;
     color: #FFFFFF;
 }  
-.banner-image img{
+.banner-image img {
     width: 100%;
     height: 613px;
     padding-top: 33px;
-    padding-right: 70px;
 }
 
 
 /*////////////////////////////////////////////////////////////////////////
 //  02- Blogs section design
 ///////////////////////////////////////////////////////////////////////*/
-
-.left-menu{
+.blogs{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 24px;
+    margin-top: 100px;
+    width: 100%;
+    align-items: flex-start;
+}
+.left-menu {
     width: 312px;
-    height: 312px;
+    min-height: 312px;
     background: #161616;
     border-radius: 10px;
-    margin-right: 24px;
 }
-
 .left-menu ul{
-    padding: 30px; 
-    width: 254px;
-    height: 254px;
+    padding: 30px 20px; 
 }
 .left-menu ul li {
-    width: 254px;
+    width: 100%;
     height: 64px;
     margin-bottom: 30px;
     background: #FFFFFF;
     border-radius: 10px;
     list-style: none;
 }
+.left-menu ul li:last-child{
+    margin-bottom: 0%;
+}
 #blog, #upcoming-match{
     background-color: #DD0000;
 }
-.left-menu li:active, .left-menu li:hover{
+.left-menu li:hover{
     background-color: #DD0000;
     transition: 0.8s;
 }
@@ -120,26 +125,23 @@ main{
     text-align: center;
     display: block;
 }
-.blogs{
-    align-items: flex-start;
-    margin-top: 100px;
-}
 .blog{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 24px;
+    width: 100%;
 }
-.blog-card{
-    width: 250px;
+.blog-card {
+    width: 100%;
     height: 362px;
-    border: 0.01px solid #dfd9d9;
-    border-radius: 10px;
+    border-radius: 5px;
+    background-color: #FFFFCE;
 }
 .blog-card img{
-    width: 250px;
+    width: 253px;
     height: 175px;
+    background-size: cover;
 }
-
 .blog-detail p{
     padding: 10px 18px;
     font-weight: 600;
@@ -160,7 +162,6 @@ main{
 .transfer-btn:hover{
     opacity: 0.5;
 }
-
 .transfer-btn a{
     text-decoration: none;
     text-align: center;
@@ -168,15 +169,15 @@ main{
     font-size: 14px;
     color: #161616;
 }
-
 .blog-icon span {
-    padding: 6px 18px;
-    margin-right: 5px;
+    padding: 6px 20px;
+    margin-right: -21px;
 }
 .fa-regular{
     font-weight: 400;
     font-size: 16px;
     color: rgba(22, 22, 22, 0.7);
+    margin-right: 7px;
 }
 #view-all {
     height: 0;
@@ -190,6 +191,7 @@ main{
 
 
 
+
 /*////////////////////////////////////////////////////////////////////////
 //  03- Footer section design
 ///////////////////////////////////////////////////////////////////////*/
@@ -197,7 +199,7 @@ main{
 footer{
     margin-top: 100px;
     background: #161616;
-    height: 444px;
+    width: 100%;
 }
 footer p{
     font-size: 40px;
@@ -208,38 +210,37 @@ footer p{
     text-align: center;
     padding-top: 100px;
 }
-hr{
-    width: 80%;
+hr {
+    width: 100%;
     height: 0px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    margin: 0 140px;
+    border: 1px solid #16162D;
 }
-.footer-nav{
+.footer-nav ul{
     padding-top: 50px;
-    height: 30px;
     text-align: center;
 }
-.footer-nav a, small{
+.footer-nav ul li{
     list-style: none;
     display: inline-block;
     margin-right: 50px;
+    min-height: 30px;
+}
+
+.footer-nav a{
     text-decoration: none;
     color: #B9B9B9;
     font-weight: 500;
     font-size: 16px;
 }
-.footer-nav a:last-child{
+.footer-nav li:last-child{
     margin-right: 0;
 }
-.footer-nav a:hover{
+.footer-nav li:hover{
     border-bottom: 3px solid red;
 }
 .social-media {
-    padding-top: 50px;
+    padding: 50px 0;
     text-align: center;
-}
-small{
-    color: #DD0000;
 }
 .fa-brands {
     font-size: 35px;
@@ -254,26 +255,43 @@ small{
 }
 
 
+
+
+
+
 /*////////////////////////////////////////////////////////////////////////
 //  04- Responsive web design
 ///////////////////////////////////////////////////////////////////////*/
 /* Extra small devices phones */
 @media screen and (max-width: 576px) {
+    body{
+        font-size: 25%;
+    }
     main{
         margin: 20px 15px;
     }
     .web-banner{
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        min-height: 690px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 95vh;
     }
     .banner-header, .banner-image {
         width: 100%;
         padding: 0px 30px;
     }
+    .banner-header{
+        background-color: blue;
+    }
+    .banner-image{
+        background-color: red;
+        margin: 0 10px;
+    }
     .banner-image img{
         width: 100%;
         height: 400px;
+        background: #000;
     }
     .banner-header h2{
         font-size: 30px;
@@ -310,7 +328,9 @@ small{
     .blogs{
         display: flex;
         flex-direction: column;
-        margin-top: 80px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 70px;
     }
     .left-menu{
         background: none;
@@ -339,23 +359,42 @@ small{
     }
     .blog-card img{
         width: 100%;
-        height: 180px;
+        height: 220px;
     }
-    .display-none{
-        display: none;
+    .fa-regular,  .blog-icon span{
+        font-size: 15px;
+        margin-right: 10px;
     }
     footer{
-        width: 100%;
+        margin-top: 30px;
+        min-height: 70vh;
+    }
+    footer p{
+        font-size: 20px;
+        padding-bottom: 10px;
+        text-align: center;
+        padding-top: 30px;
+    }
+   .footer-nav nav ul{
+        padding-top: 10px;
         align-items: center;
+        padding: 0 25px;
+    }
+    .footer-nav nav li{
         display: block;
-        justify-content: center;
-    }
-    footer nav ul{
-        padding: 10px 150px;
-     
-    }
-    footer nav li{
         margin-top: 20px;
+        margin-right: 0px;
+    }
+    .footer-nav a{
+        font-size: 14px;
+        text-align: center;
+        display: inline-block;
+        padding: 5px 10px;
+    }
+    .footer-nav nav li:hover{
+        background-color: #DD0000;
+        border: none;
+        transition: 2s;
     }
 
 
